@@ -1,0 +1,93 @@
+{%extends "layout.html" %}
+{% block content %}
+   <div class="jumbo">
+	<h1> Results!</h1>
+	
+   </div>
+
+<table>
+<tr>
+<td>
+     <table border = 1px>
+	 
+<thead>
+   <th style="color:red">Hash</th>
+    <th style="color:red">Count</th>
+</thead> 
+   
+   
+   {% for val in result[0] %}
+   {% if loop.index is divisibleby 2 %}
+   <tr class="odd">
+   {% else %}
+   <tr> 
+   {% endif %}
+   <td>
+        {{val[0]}}
+	  </td>
+	  <td>
+	  {{ val[1]}}
+	  </td>
+</tr>	
+   {% endfor %} 
+  
+
+</table>
+
+</td>
+<td>
+    <table border = 1px>
+<thead>
+   <th style="color:red">Handle</th>
+    <th style="color:red">Count</th>
+</thead>    
+    {% for val in result[1] %}
+    {% if loop.index is divisibleby 2 %}
+   <tr class="odd">
+   {% else %}
+   <tr> 
+   {% endif %}
+   <td>
+		{{val[0]}}
+   </td>
+	  <td>
+	  {{ val[1]}}
+	  </td>
+</tr>	
+   {% endfor %} 
+
+</table>
+</td>
+
+
+<td>
+    <table border = 1px>
+<thead>
+   <th style="color:red">Word Count</th>
+    <th style="color:red">Count</th>
+</thead>   
+    {% for val in result[2] %}
+    {% if loop.index is divisibleby 2 %}
+   <tr class="odd">
+   {% else %}
+   <tr> 
+   {% endif %}
+   <td>
+        {{val[0]}}
+	  </td>
+	  <td>
+	  {{ val[1]}}
+	  </td>
+</tr>	
+   {% endfor %} 
+  
+
+</table>
+</td>
+</tr>
+</table>
+	
+{% endblock %}
+
+
+

@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  background-color: #b7d1c4;
+}
+
+ 
+/*
+ * Create dark grey header with a white logo
+ */
+  
+header {
+  background-color: #2B2B2B;
+  height: 35px;
+  width: 100%;
+  opacity: .9;
+  margin-bottom: 10px;
+}
+ 
+header h1.logo {
+  margin: 0;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  float: left;
+}
+ 
+header h1.logo:hover {
+  color: #fff;
+  text-decoration: none;
+  
+}
+ 
+/*
+ * Center the body content
+ */
+  
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+ 
+div.jumbo {
+  padding: 10px 0 30px 0;
+  background-color: #eeeeee;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+ 
+h1 {
+  font-size: 3em;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: -2px;
+}
+
+h2.home{
+text-align:center;
+}
+
+h3 {
+text-align:center;
+font-size:30px;
+font-family: Times New Roman;
+}
+
+
+p.feed {
+text-align:center
+}
+/*h3 {
+  font-size: 1.7em;
+  font-weight: 100;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #999;  
+} */
+
+input{
+	color: gray;
+}
+
+
+#navbar {
+  float: right;
+  margin-top: 8px;
+  font-size:16px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: bold;
+  text-shadow: 3px 2px 3px #333333; }
+	
+#navbar li {
+	list-style: none;
+	float: left;
+	display: inline;
+	}
+	
+#navbar li + li {
+	margin-left:35px;
+}
+	
+#navbar li a {
+	display: block;
+	color: #999;
+	text-decoration: none; }
+	
+#navbar li ul {
+	display: none; 
+	width: 10em; /* Width to help Opera out */
+	background-color: #69f;}
+	
+#navbar li:hover ul {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 0; }
+	
+#navbar li:hover li {
+	float: none; }
+	
+#navbar li:hover li a {
+	background-color: #69f;
+	border-bottom: 1px solid #fff;
+	color: #000; }
+	
+#navbar li li a:hover {
+	background-color: #8db3ff; }	
+
+
+	
+tr {
+background-color: #eee;
+}
+
+tr.odd{
+background-color: #ccc;
+}
+
+p.dev{
+float: right;
+}
+h2.ld_legend{
+text-align: center;
+}

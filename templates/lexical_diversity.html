@@ -1,0 +1,25 @@
+{%extends "layout.html" %}
+{% block content %}
+<img src= "http://www.clipartpal.com/_thumbs/pd/education/look_it_up_T.png" height="100" width="500"/> </h2>
+	<h2> Lexical Diversity (Twitter)</h2> 
+	<p> This tool measures an individuals lexical diversity based on the vocabulary displayed by their twitter accounts. </p>
+	<label for='hashtag'>Enter data here:</label>
+	
+	<form action="l_process" method ="post">
+	<input type="text" name="hashtag" value= " " size="100" maxlength="125" />
+	<input type= "submit" name="submit" value="Submit" /> 
+	</form>
+	
+	
+	<p> <span style= "font-family:impact">Lexical Diversity</span>: "Lexical diversity is a term used among interpersonal communication scholars to describe the range of 
+	a speaker's vocabulary. It provides a quantitative measure for the diversity of an individual’s or group’s vocabulary.
+	Research demonstrates that audiences consistently judge lexically diverse speakers as more competent, of higher social status, 
+	and more persuasive than a low-diversity counterpart." -<a href="http://www.craweblogs.com/commlog/archives/000533.html">
+	http://www.craweblogs.com/ </a></p>
+	
+	<p><span style= "font-family:impact"> Guide</span>: You can input a hashtag or any text you want. When you click submit you
+	will see the lexical diversity of the tweets in which the input is mentioned, how often new
+	screen names and hashtags are mentioned alongside it, and the average length of the tweets in which the input is included.
+	</p>
+	
+{% endblock %}

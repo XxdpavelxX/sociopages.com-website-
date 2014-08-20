@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+	<h2> Twitter <img src= "http://www.milestonemktg.com/wp-content/uploads/2014/04/twitter-logo-300x300.jpg" height="100" width="100"/> </h2>
+	<p> This page analyzes Twitter Data. </p>
+	<label for='hashtag'>Enter Hashtag here:</label>
+	
+	<form action="process" method ="post">
+	<input type="text" name="hashtag" value= "#" size="100" maxlength="125" />
+	<input type= "submit" name="submit" value="Submit" />
+	</form>
+	
+{% endblock %}

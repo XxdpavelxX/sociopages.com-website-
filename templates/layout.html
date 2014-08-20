@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Social App</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">;
+  </head>
+  <body>
+   
+    <header>
+      <div class="container">
+        <h1 class="logo">The Social App</h1>
+			
+		<strong><nav>
+			<ul id="navbar">
+				<li><a href="/">Home</a></li>
+				
+				<li><a href="#">Twitter</a>
+					<ul>
+					<li><a href="/twitter"> Tweet Tracker</a></li>
+					<li><a href="lexical_diversity"> Lexical Diversity</a></li>
+					<li><a href="#"> Coming Soon</a></li>
+					</ul>
+					</li>
+				
+				<li><a href="#">Facebook</a>
+					<ul>
+					<li><a href="/facebook"> Popularity</a></li>
+					<li><a href="#"> Coming Soon </a></li>
+					</ul>
+					</li>
+					
+				<li> <a href = "/linkedin"> Linkedin </a>
+					<ul>
+					<li><a href="#"> Coming Soon</a></li>
+					</ul>
+					</li>
+
+					<li><a href="#"> About</a>
+					<ul>
+					<li><a href="/about">The Social App</a></li>
+					<li><a href="/developer">The Developer</a></li>
+					</ul>
+				</li>
+					
+				</ul>
+
+			
+		</nav></strong>
+      
+	</div>
+    </header> 
+     
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+     
+  </body>
+</html>

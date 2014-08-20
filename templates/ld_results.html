@@ -1,0 +1,45 @@
+{%extends "layout.html" %}
+{% block content %}
+
+<table border = 1px>
+<tr>
+ <th colspan="4">Lexical Diversity</th>
+<th>Words</th>
+<td>
+{% print lexd_words %}
+</td>
+<th>Screen Names</th>
+<td>
+{% print lexd_screen_names %}
+</td>
+<th>Hashtags</th>
+<td>
+{% print lexd_hashtags %}
+</td>
+<th> Avg Length of Tweets</th>
+<td>
+{% print lexd_status_texts %}
+</td>
+</table>
+
+
+<h2 class = "ld_legend"> Legend </h2>
+	<ul
+	<li> <span style="font-family:impact" >Words</span>: This value represents the lexical diversity of the words in the text of the tweets. For example if it 
+	is 0.67 that means that about two out of every three words is unique, or you could say that each status 
+	update carries around 67% unique words. Since the average number of words in a sing;e tweet is approximately 6, that 
+	translates to 4 unique words for each tweet. When processing this data it is important to also take into account the nature of the 
+	tweets and the purpose of the account. For example you can usually expect an account advertising a product to frequently use the
+	product's name and thus have a lower lexical diversity.</li>
+	
+	<li> <span style= "font-family:impact">Screen Names</span>: The lexical diversity of the screen names mentioned following the specified hashtag.
+	For example a value of 0.95, means that about 19 out of 20 screen names mentioned are unique. </li>
+	<li> <span style="font-family:impact" >Hashtags</span>: The lexical diversity of the hashtags mentioned besides the specified hashtag in the search.</li>
+	<li> <span style="font-family:impact">Avg Length of Tweets</span>: The average length of tweets in words that include the specified hashtag. </li>
+	</ul>
+	{% endblock %}
+	
+
+
+
+
