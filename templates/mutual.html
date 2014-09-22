@@ -1,0 +1,9 @@
+{%extends "layout.html" %}
+{%block content %}
+<img src = "https://www.sec.gov/images/global-banner-org-name.png"/>
+<p> Please enter the firm's CIK number. </p>
+<form action="/mutual_results" method="post">
+<input type="text" name="cik_number" value= "" size ="100" maxlength="125"/>
+<input type= "submit" name="submit" value="Submit" /> 
+</form>
+{% endblock %}

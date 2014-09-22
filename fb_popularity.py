@@ -1,7 +1,7 @@
 import facebook # pip install facebook-sdk
 import json
 
-g = facebook.GraphAPI('CAACEdEose0cBALeJ2BFCZB9V3LDHYzLGN2y4HqzksR27yq3LIrfCWVKm9vQXZA934zH2q2g0SA76IxCGn1UIHvXZCceR1ownPOeXcRA2vEk7pC6PGGLjrVognSAcucHLO8jeAgcKZAu1XVyZChlrxW5YwXG8k1PuGeQO4cUajXp31PfDYk8dDOpunrZAi6vqEYdaoFIfYCRwsQsRLBzMqOk3P7SRBSmvAZD')
+g = facebook.GraphAPI('CAACEdEose0cBAJ3ZBtQKs7WScgahjoOXVxOGXl3tXxfOZAQyVbZB3aCuudGE6v5ijaDP8WoxZCNaKkKldW0h66tJw3gr7pDVA8tkS4r0slYyNZA1G20bBT6ZAkLp9Gmq7TfuZA0P2GOZCvh1r2ddQgf6dltRzDBGDh0POyLeEMgfKechgYMwOtn1STTbFcG0BoRCk1aNrN1xQpjNnMDowgAzZAOr91dSVTtgZD')
 	
 # Find Pepsi and Coke in search results
 #pp(g.request('search', {'q' : 'pepsi', 'type' : 'page', 'limit' : 5}))

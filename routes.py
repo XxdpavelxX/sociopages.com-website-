@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import frequency_analysis
 import lexical_diversity
 import fb_popularity
+import cik
 
 app=Flask(__name__)
 
@@ -35,8 +36,6 @@ def l_process():
 	kwargs['lexd_status_texts']= lexical_diversity.average_words(status_texts)
 	return render_template('ld_results.html',**kwargs)
 	
-
-
 @app.route('/facebook')
 def fbook():
 	return render_template('facebook.html')	
@@ -61,6 +60,25 @@ def about():
 @app.route('/developer')
 def developer():
 	return render_template('developer.html')
+
+@app.route('/mutual_funds')
+def projs():
+	return render_template('mutual.html')
+	
+@app.route('/mutual_results',methods = ['POST'])
+def proj_res():
+	list1=[]
+	kwargs = {}
+	ciknum= request.form["cik_number"]
+	link = cik.getLatestFiling(ciknum)
+	if link!="No filing found, please try a different CIK number.":
+		filingLink = cik.getFilingTextFile(link)
+		iterator =  cik.getHoldings(filingLink)
+		for x in iterator:
+			list1.append(x)
+		kwargs['ans']=list1
+		
+	return render_template('cik_results.html', **kwargs)
 
 	
 if __name__ =="__main__":
