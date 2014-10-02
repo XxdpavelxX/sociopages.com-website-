@@ -1,0 +1,14 @@
+{%extends "layout.html" %}
+{% block content %}
+<p>*Note: Currently only returns results for UFC regardless of what was queried, I am working on fixing this issue.</p>
+<p>Refresh the page to get the newest tweets! Currently working on making this a live process without the need for refresh</p>
+
+<table>
+{% for val in streams %}
+<tr><td>
+	      <p> {{val.user.screen_name}} ({{val.user.name}}):</p> <p class="linkss"> {{val.text}} </p>
+</td></tr>
+{% endfor %}
+</table>
+
+{% endblock %}

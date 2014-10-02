@@ -1,0 +1,12 @@
+{%extends "layout.html" %}
+{%block content %}
+<img src = "http://bernhardhaeussner.de/upl/th540px/Twitter-Stream-Sep09_3d.png"/>
+<p> Please input your topic of interest. </p>
+<form action="/tweet_stream_results" method="post">
+<input type="text" name="twitter_stream" value= "UFC" size ="100" maxlength="125"/>
+<input type= "submit" name="submit" value="Submit" /> 
+</form>
+
+<p>*Note: Currently only works for UFC, will return results for UFC regardless of 
+what is in the text box. I am currently working on fixing this issue. </p>
+{% endblock %}

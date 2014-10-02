@@ -7,6 +7,11 @@ from htmlParser import MyHTMLParser
 import lxml
 from lxml import etree, objectify
 from io import StringIO, BytesIO
+#from pymongo import MongoClient
+
+#c = MongoClient("localhost", 27017)
+#db= c.cikdb
+
 
 #cik= raw_input('Please enter a CIK number:' )   Note: If you bring this back, bring back link var on line 71
 #print cik
@@ -21,7 +26,6 @@ def getLatestFiling( cik, filingType="13F-HR"):
     for entry in feed['entries']:
         #print 'test'+entry.title
         if '13F-HR' in entry.title:
-            print entry.link
             return entry.link
     return "No filing found, please try a different CIK number."
     #return ""
@@ -36,7 +40,8 @@ def getFilingTextFile(secPageUrl):
 
 # return dictionary of holding and % of holdings
 def getHoldings(linkToTextFile):
-    print linkToTextFile
+    #collection = db.linkToTextFile
+    #print linkToTextFile
     r = requests.get(linkToTextFile)
     XMLer= str(r.text.replace('&', '&amp;'))
     #print XMLer
@@ -53,10 +58,13 @@ def getHoldings(linkToTextFile):
         if i >= 0:
             child.tag = child.tag[i+1:]
         if 'nameOfIssuer' in child.tag:
-            yield child.tag, '-', child.text
+            #collection.insert({child.tag:child.text})
+            yield child.tag + " : " + child.text
         if 'value' in child.tag:
-            yield child.tag, '-', child.text
-            yield ('--------------------------------------------------------------------------------------------')
+            #collection.insert({child.tag:child.text})
+            yield child.tag + ' : ' + child.text
+            #yield ('--------------------------------------------------------------------------------------------')
+#getLatestFiling('0001166559', filingType="13F-HR")
 
 
     #print #lxml.etree.XTMl(a)

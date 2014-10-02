@@ -27,4 +27,4 @@ class MyHTMLParser(HTMLParser):
 parser = MyHTMLParser()
 r = requests.get("http://www.sec.gov/Archives/edgar/data/1166559/000104746907006532/0001047469-07-006532-index.htm")
 parser.feed(r.text)
-print 'www.sec.gov'+parser.linkToTextFile
+#print 'www.sec.gov'+parser.linkToTextFile

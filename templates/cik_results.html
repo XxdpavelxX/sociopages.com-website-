@@ -1,8 +1,39 @@
 {%extends "layout.html" %}
 {% block content %}
+   <div class="jumbo">
+	<h1> Results!</h1>
+	
+   </div>
+   <p> * Note: If the following table "Fund Name, Amount of Holdings" is empty it means that there are no H1-FR files for 
+	the mutual fund associated with the specified cik number, or the cik number does not exist.  Make sure the cik number 
+	is typed correctly and that the mutual fund has an H1-FR file on the EDGAR database. Feel free to contact me 
+	with questions or suggestions. </p>
 
+<table>
+<tr>
+<td>
+     <table border = 1px>
+	 
+<thead>
+   <th style="color:red">Fund Name, Amount of Holdings</th>
+</thead> 
+   
+   
+   {% for val in ans %}
+   {% if loop.index is divisibleby 2 %}
+   <tr class="odd">
+   {% else %}
+   <tr> 
+   {% endif %}
+   <td>
+        {{val}}
+	  </td>
 
+</tr>	
+   {% endfor %} 
+  
 
-{% print ans %}
+</table>
 
-{% endblock %}
+	
+{% endblock %} 
